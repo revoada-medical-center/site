@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA</title>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+                crossorigin="anonymous"/>
+        <script src="scripts/jspdf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+        <script src="https://www.drv.tw/inc/wd.js?s=revoadamedicalcenter09"></script>
+        <script src="scripts/dna.js"></script>
+        <link href="styles/style-dna.css" rel="stylesheet">
+        <title>Beta HCG</title>
+    </head>
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li><a class="nav-link scrollto" href="index.html">Início</a></li>
+                <li><a class="nav-link scrollto" href="fator-rh.html">Fator RH</a></li>
+                <li><a class="nav-link scrollto" href="hemograma.html">Hemograma</a></li>
+                <li><a class="nav-link scrollto active" href="dna.html">DNA</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+    </div>
+</header>
+<div id="main-container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h3>Teste Paternidade</h3>
+            <hr>
+            <div class="row md-3">
+                <div class="col-md-6">
+                    <button onclick="testeBeta()" class="btn btn-danger mb-4">Iniciar Teste</button>
+                </div>
+                <div class="col-md-6">
+                    <p id="resultado"></p>
+                </div>
+            </div>
+            <form id="form">
+                <div class="row md-2">
+                    <div class="md-3">
+                        <label for="nome" class="form-label">Nome Mãe: </label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="passport" class="form-label">Nome Criança: </label>
+                        <input type="text" class="form-control" id="passport" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="idade" class="form-label">Nome Alegado </label>
+                        <input type="text" class="form-control" id="idade" required>
+                    </div>
+                </div>
+                <div class="row md-2">
+                    <div class="col-md-6">
+                        <label for="medicoresponsavel" class="form-label" >Médico Responsável: </label>
+                        <input type="text" class="form-control" id="medicoresponsavel" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="passaportmedico" class="form-label">Passaporte: </label>
+                        <input type="text" class="form-control" id="passaportmedico" required>
+                    </div>
+                </div>
+                <span id="assinatura" class="d-block pb-2">Assinatura Médico</span>
+                <div class="signature mb-2" style="width: 100%; height: 200px;">
+                    <canvas id="signature-canvas"
+                            style="border: 1px dashed red; width: 100%; height: 150px;"></canvas>
+                    <button id="botao" type="submit" class="btn btn-danger mb-4">Imprimir Resultado</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
