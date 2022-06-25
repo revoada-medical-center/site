@@ -287,7 +287,7 @@ body {
     padding: 25px;
     box-shadow: 10px 10px 10px rgba(46, 45, 45, 0.555);
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(10px);
 }
 

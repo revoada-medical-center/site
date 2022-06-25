@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA</title>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="scripts/vacina-bb.js"></script>
+        <script src="scripts/jspdf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+        <link href="styles/style-vacina-bb.css" rel="stylesheet">
+        <title>Vacinação</title>
+    </head>
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light ">
+                    <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Início</a>
+                    </li>
+                    <li><a class="nav-link scrollto" href="fator-rh.html">Fator RH</a></li>
+                    <li><a class="nav-link scrollto" href="hemograma.html">Hemograma</a></li>
+                    <li><a class="nav-link scrollto" href="dna.html">DNA</a></li>
+                    <li><a class="nav-link scrollto" href="bate-ponto.html">Bate Ponto</a></li>
+                    <li><a class="nav-link scrollto" href="#">Vacina da Criança</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Vacina do Bebê
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="vacina-de-bb-menina.html">Menina</a>
+                            <a class="dropdown-item" href="vacina-de-bb-menino.html">Menino</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </div>
+    </header>
+    <div id="main-container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+<br><br><br><br>
+                <div class="row md-3">
+
+                    <div class="col-md-6">
+                        <p id="resultado"></p>
+                    </div>
+                </div>
+                <form id="form">
+                    <div class="row md-2">
+                        <div class="md-3">
+                            <label for="nome" class="form-label">Nome da Mãe: </label>
+                            <input type="text" class="form-control" id="nome" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="passport" class="form-label">Nome do Bebê: </label>
+                            <input type="text" class="form-control" id="passport" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="idade" class="form-label">Nome do Pai </label>
+                            <input type="text" class="form-control" id="idade" required>
+                        </div>
+                    </div>
+                    <div class="row md-2">
+                        <div class="col-md-6">
+                            <label for="medicoresponsavel" class="form-label" >Médico Responsável: </label>
+                            <input type="text" class="form-control" id="medicoresponsavel" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="passaportmedico" class="form-label">Passaporte: </label>
+                            <input type="text" class="form-control" id="passaportmedico" required>
+                        </div>
+                    </div>
+                    <span id="assinatura" class="d-block pb-2">Assinatura Médico</span>
+                    <div class="signature mb-2" style="width: 100%; height: 200px;">
+                        <canvas id="signature-canvas"
+                                style="border: 1px dashed red; width: 100%; height: 150px;"></canvas>
+                        <button id="botao" type="submit" class="btn btn-danger mb-4">Imprimir Resultado</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
