@@ -17,26 +17,50 @@
                 integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
                 crossorigin="anonymous"/>
         <script src="scripts/jspdf.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
         <script src="https://www.drv.tw/inc/wd.js?s=revoadamedicalcenter09"></script>
         <script src="scripts/dna.js"></script>
         <link href="styles/style-dna.css" rel="stylesheet">
         <title>Beta HCG</title>
     </head>
-<header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-        <nav id="navbar" class="navbar order-last order-lg-0">
-            <ul>
-                <li><a class="nav-link scrollto" href="index.html">Início</a></li>
-                <li><a class="nav-link scrollto" href="fator-rh.html">Fator RH</a></li>
-                <li><a class="nav-link scrollto" href="hemograma.html">Hemograma</a></li>
-                <li><a class="nav-link scrollto active" href="dna.html">DNA</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
-        <!-- .navbar -->
-    </div>
-</header>
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+            <nav id="navbar" class="navbar navbar-expand-lg navbar-light ">
+                <button class="navbar-toggler" type="button"
+                        data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link  " href="index.html">Início</a>
+                        </li>
+                        <li><a class="nav-link scrollto " href="fator-rh.html">Fator RH</a></li>
+                        <li><a class="nav-link scrollto " href="hemograma.html">Hemograma</a></li>
+                        <li><a class="nav-link scrollto active" href="dna.html">DNA</a></li>
+                        <!--   <li><a class="nav-link scrollto" href="bate-ponto.html">Bate Ponto</a></li> -->
+                        <li><a class="nav-link scrollto" href="#">Vacina da Criança</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Vacina do Bebê
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="vacina-de-bb-menina.html">Menina</a>
+                                <a class="dropdown-item" href="vacina-de-bb-menino.html">Menino</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
 <div id="main-container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
